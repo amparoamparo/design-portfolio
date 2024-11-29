@@ -1,0 +1,97 @@
+---
+import '../styles/global.css';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import Image from 'astro/components/Image.astro';
+
+const projects = (await getCollection('projects')).sort(
+	(a, b) => a.data.order.valueOf() - b.data.order.valueOf(),
+);
+
+// Import Markdown files
+const allPosts = import.meta.glob('/src/content/projects/*.md');
+
+// Resolve all content
+const entries = await Promise.all(
+  Object.entries(allPosts).map(async ([path, resolver]) => {
+    const post = await resolver(); // Invoke the resolver function
+    return { path, frontmatter: post.frontmatter, Content: post.default }; // Extract frontmatter and default export
+  })
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+
+	<body>
+		<Header />
+		<main class="xl:grid xl:gap-12 py-12">
+				<section class="w-full xl:grid">
+					{
+						entries.map(({ frontmatter, Content }) => (
+							<div class="xl:grid xl:grid-cols-3 xl:gap-24 xl:p-12 p-4">
+								<aside class="xl:sticky top-12 xl:self-start">
+									<div class="xl:flex xl:flex-col mb-24 xl:gap-12 xl:justify-between">
+										<div class="grid gap-8">
+											{/* <a href={`/projects/${project.slug}/`}> */}
+											<h2 class="font-bold text-xl">{frontmatter.title}</h2>
+											{/* </a> */}
+											{Content ? <Content /> : <p>No content found</p>}
+											
+											<div>
+												{/* <h3 class="mt-24"><span class="font-bold">Client:</span> {project.data.client}</h3>
+												<h3 class=""><span class="font-bold">My role:</span> {project.data.role}</h3>
+												<h3 class=""><span class="font-bold">Deliverables:</span> {project.data.deliverables}</h3> */}
+												<div class="flex gap-4 mt-4">{frontmatter.tags.map((tag) => ( <p class="uppercase text-xs px-4 py-1 rounded-full outline">{tag}</p> ))}</div>
+											</div>
+										</div>
+										{/* <a href={`/projects/${project.slug}/`} class="font-sans font-bold not-italic underline underline-offset-4 decoration-slate-200 decoration-1 hover:decoration-black text-black visited:text-black">Explore the project</a> */}
+									</div>
+								</aside>
+				
+								<div class="col-span-2 w-full">
+									<div class="grid grid-cols-2 gap-4">
+										<Image width={1920} height={1280} src={frontmatter.images[0]} alt="" class="rounded-3xl col-span-2 w-full aspect-auto" loading={'eager'}/>
+										<Image width={720} height={360} src={frontmatter.images[1]} alt="" class="rounded-3xl w-full"/>
+										<Image width={720} height={360} src={frontmatter.images[2]} alt="" class="rounded-3xl w-full"/>
+										<Image width={720} height={360} src={frontmatter.images[3]} alt="" class="rounded-3xl w-full"/>
+										<Image width={720} height={360} src={frontmatter.images[4]} alt="" class="rounded-3xl w-full"/>
+									</div>
+								</div>
+							</div>
+								<hr class="h-px border-0 my-12 mx-12 bg-gradient-to-r from-transparent via-slate-200 to-transparent last:hidden"/>
+						))
+					}
+				</section>
+		</main>
+		<Footer />
+	</body>
+	</html>
+
+	<style>
+		@media (prefers-reduced-motion: no-preference) {
+			img {
+				animation: fade-in ease-in-out 10s, fade-out linear;
+				animation-timeline: view();
+				animation-range: entry, exit;
+				/* animation-range-start: cover, cover;
+				animation-range-end: 500px, 900px; */
+			}
+
+			@keyframes fade-in {
+				from { scale: .8; opacity: 1; }
+				to { scale: 1; opacity: 1; }
+			}
+
+			@keyframes fade-out {
+				from { scale: 1; opacity: 1; }
+				to { scale: 0.9; opacity: 0.5; }
+			}
+		}
+	</style>

@@ -1,0 +1,21 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header class="text-lg">
+	<nav class="w-full px-12 mt-12 flex justify-between mb-4">
+		<div class="flex">
+			<h1><a href="/" class="text-4xl font-medium text no-underline">Amparo Zeballos</a></h1>
+		</div>
+		<div class="flex gap-4">
+			<HeaderLink href="/" class="no-underline">Work</HeaderLink>
+			<HeaderLink href="/about" class="no-underline">About</HeaderLink>
+			<HeaderLink href="mailto:hello@amparo.design" class="no-underline">Contact</HeaderLink>
+		</div>
+	</nav>
+	<address class="px-12 font-sans not-italic underline underline-offset-4 decoration-slate-200 decoration-1 text-black visited:text-black flex gap-4 mb-12">
+		<a href="https://behance.net/amparozeballos" class="hover:decoration-black">Behance</a>
+		<a href="https://instagram.com/amparo.illustration" class="hover:decoration-black">Instagram</a>
+		<a href="https://linkedin.com/in/amparozeballos" class="hover:decoration-black">LinkedIn</a>
+	</address>
+</header>
