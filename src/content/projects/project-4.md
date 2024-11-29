@@ -5,11 +5,11 @@ moreInfo: "Featured by Retro Supply Co. on their Instagram account."
 order: 3
 images:
   [
-    "/Straweberries1.jpg",
-    "/Straweberries4.jpg",
-    "/Straweberries3.jpg",
-    "/Straweberries6.jpg",
-    "/strawberries-animated.gif",
+    "/images/Straweberries1.jpg",
+    "/images/Straweberries4.jpg",
+    "/images/Straweberries3.jpg",
+    "/images/Straweberries6.jpg",
+    "/images/strawberries-animated.gif",
   ]
 role: "Illustrator"
 tags: ["stationery design", "illustration"]

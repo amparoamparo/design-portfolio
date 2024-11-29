@@ -5,11 +5,11 @@ moreInfo: "After sharing the poster on social media, the band said 'This is so c
 order: 3
 images:
   [
-    "/WheatusFromeLemon1.jpg",
-    "/WheatusFromeLemon2.jpg",
-    "/WheatusFromeLemon3.jpg",
-    "/WheatusFromeLemon4.jpg",
-    "/wheatus-animation.gif",
+    "/images/WheatusFromeLemon1.jpg",
+    "/images/WheatusFromeLemon2.jpg",
+    "/images/WheatusFromeLemon3.jpg",
+    "/images/WheatusFromeLemon4.jpg",
+    "/images/wheatus-animation.gif",
   ]
 role: "Illustrator"
 tags: ["poster design", "illustration", "hand lettering"]
@@ -19,4 +19,4 @@ Illustrated poster featuring hand lettering. This piece is part of an on-going p
 
 After sharing the poster on social media, the band said: _'This is so cute!!!'_.
 
-<img src="WheatusComment.jpg" width="300" height="100">
+<img src="/images/WheatusComment.jpg" width="300" height="100">

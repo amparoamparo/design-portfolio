@@ -4,11 +4,11 @@ description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ei
 order: 1
 images:
   [
-    "/ASHGuitars1.jpg",
-    "/ASHGuitars2.jpg",
-    "/ASHGuitars5.jpg",
-    "/ASHGuitars4.jpg",
-    "/ASHGuitars3.jpg",
+    "/images/ASHGuitars1.jpg",
+    "/images/ASHGuitars2.jpg",
+    "/images/ASHGuitars5.jpg",
+    "/images/ASHGuitars4.jpg",
+    "/images/ASHGuitars3.jpg",
   ]
 client: "ASH Guitars"
 role: "Graphic Designer"
