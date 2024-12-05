@@ -1,0 +1,56 @@
+---
+import '../styles/global.css';
+import BaseHead from '../components/BaseHead.astro';
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Amparo Zeballos ✷ Graphic Designer & Illustrator - amparo.design | 404: Page Not Found" description={"404: Page Not Found"} />
+	</head>
+
+	<body class="text-white text-center">
+		<main class="grid min-h-svh w-full place-items-center bg-indigo-600">
+		<div>
+      <h1 class="text-3xl md:text-5xl font-bold">Amparo Zeballos</h1>
+      <p class="text-center text-lg md:text-xl">Graphic Designer & Illustrator</p>
+    </div>
+		<div class="grid gap-16">
+      <h2 class="text-4xl md:text-6xl font-bold">404: NOT FOUND</h2>
+      <p class="text-center text-xl md:text-3xl">Sorry, that page doesn't exist.</p>
+    </div>
+      <div class="grid gap-10">
+        <a href="/" class="w-fit text-xl md:text-2xl md:hover:scale-110 p-6 outline outline-offset-0 rounded-full hover:outline-white transition-all no-underline">
+          &#x2190; Back to the homepage
+        </a>
+        <address class="flex gap-4 justify-center">
+          <a href="mailto:hello@amparo.design" class="not-italic hover:decoration-white">
+            Email
+          </a>
+          <a href="https://behance.net/amparozeballos" class="not-italic hover:decoration-white">
+            Behance
+          </a>
+          <a href="https://instagram.com/amparo.illustration" class="not-italic hover:decoration-white">
+            Instagram
+          </a>
+          <a href="https://linkedin.com/in/amparozeballos" class="not-italic hover:decoration-white">
+            LinkedIn
+          </a>
+        </address>
+      </div>
+    
+		</main>
+	</body>
+	</html>
+
+  <style>
+    main {
+      animation: fade-in-footer linear, fade-out-footer linear;
+			animation-timeline: view();
+			animation-range: entry, exit;
+			filter: brightness(200%);
+			background-image: url('/images/footer-texture.jpg');
+			background-size: cover;
+			background-position: bottom;
+			background-blend-mode: multiply;
+    }
+  </style>

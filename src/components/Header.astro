@@ -18,7 +18,6 @@ const dynamicLink = links[currentPath] || links['/']; // Fallback to home
 			<h1><a href="/" class="text-lg lg:text-4xl font-bold lg:font-bold no-underline">Amparo Zeballos</a></h1>
 		</div>
 		<div class="flex gap-6 text-lg lg:text-2xl items-center">
-			<!-- <HeaderLink href="/" class="no-underline">Work</HeaderLink> -->
 			<HeaderLink href={dynamicLink.href} class="no-underline">
         {dynamicLink.text}
       </HeaderLink>
