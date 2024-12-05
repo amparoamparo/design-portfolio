@@ -9,4 +9,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://amparo.design",
   integrations: [mdx(), sitemap(), tailwind()],
+  trailingSlash: "never",
 });
