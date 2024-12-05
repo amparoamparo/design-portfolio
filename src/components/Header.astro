@@ -3,19 +3,19 @@ import HeaderLink from './HeaderLink.astro';
 ---
 
 <header class="text-lg">
-	<nav class="w-full px-12 mt-12 flex justify-between mb-4">
-		<div class="flex">
-			<h1><a href="/" class="text-4xl font-medium text no-underline">Amparo Zeballos</a></h1>
+	<nav class="w-full lg:px-12 px-6 mt-6 lg:mt-12 flex justify-between mb-2 lg:mb-4">
+		<div class="flex items-center">
+			<h1><a href="/" class="text-lg lg:text-4xl font-bold lg:font-bold no-underline">Amparo Zeballos</a></h1>
 		</div>
-		<div class="flex gap-4">
-			<HeaderLink href="/" class="no-underline">Work</HeaderLink>
+		<div class="flex gap-4 text-lg lg:text-2xl items-center">
+			<!-- <HeaderLink href="/" class="no-underline">Work</HeaderLink> -->
 			<HeaderLink href="/about" class="no-underline">About</HeaderLink>
 			<HeaderLink href="mailto:hello@amparo.design" class="no-underline">Contact</HeaderLink>
 		</div>
 	</nav>
-	<address class="px-12 font-sans not-italic underline underline-offset-4 decoration-slate-200 decoration-1 text-black visited:text-black flex gap-4 mb-12">
-		<a href="https://behance.net/amparozeballos" class="hover:decoration-black">Behance</a>
-		<a href="https://instagram.com/amparo.illustration" class="hover:decoration-black">Instagram</a>
-		<a href="https://linkedin.com/in/amparozeballos" class="hover:decoration-black">LinkedIn</a>
+	<address class="hidden lg:flex px-6 lg:px-12 font-sans text-base not-italic underline underline-offset-4 decoration-slate-200 decoration-1 text-black visited:text-black gap-4 lg:mb-12">
+		<a href="https://behance.net/amparozeballos" class="hover:decoration-black transition-all">Behance</a>
+		<a href="https://instagram.com/amparo.illustration" class="hover:decoration-black transition-all">Instagram</a>
+		<a href="https://linkedin.com/in/amparozeballos" class="hover:decoration-black transition-all">LinkedIn</a>
 	</address>
 </header>

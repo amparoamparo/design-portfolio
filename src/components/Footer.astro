@@ -1,12 +1,11 @@
 ---
 const today = new Date();
 ---
-
-<footer class="xl:flex xl:flex-col xl:justify-end mt-12 xl:mx-8 py-16 bg-indigo-600 text-white sticky b-0 rounded-t-3xl items-center">
-	<span class="uppercase text-center xl:text-9xl font-black mb-24 xl:px-12 w-full">
+<footer class="flex flex-col justify-end mt-24 xl:mt-12 mx-2 xl:mx-8 py-16 bg-indigo-600 text-white sticky b-0 rounded-t-3xl items-center">
+	<span class="uppercase text-center text-5xl xl:text-9xl font-black mb-16 xl:mb-24 xl:px-12 w-full">
 		Let's work together
 	</span>
-	<a href="mailto:hello@amparo.design" class="w-fit xl:mx-12 xl:text-6xl hover:scale-125 xl:p-20 outline outline-offset-0 rounded-full hover:outline-white transition-all no-underline">
+	<a href="mailto:hello@amparo.design" class="w-fit xl:mx-12 text-3xl xl:text-6xl xl:hover:scale-125 p-6 xl:p-20 outline outline-offset-0 rounded-full hover:outline-white transition-all no-underline">
 		hello@amparo.design
 	</a>
 	<!-- <div class="relative flex overflow-x-hidden">
@@ -26,13 +25,23 @@ const today = new Date();
 			<span class="text-xl mx-2">Designed and coded by Amparo Zeballos with &#x1F496; and 🧉.</span>
 		</div>
 	</div> -->
-	<p class="px-12 mt-60 b-4 font-mono">
+	<img src="/favicon.svg" alt="" class="mt-24 md:hidden" id="star" width="60px">
+	<address class="md:hidden flex px-6 font-sans text-base not-italic underline underline-offset-4 decoration-white decoration-1 text-white visited:text-white gap-6 mt-24">
+		<a href="https://behance.net/amparozeballos" class="hover:decoration-white">Behance</a>
+		<a href="https://instagram.com/amparo.illustration" class="hover:decoration-white">Instagram</a>
+		<a href="https://linkedin.com/in/amparozeballos" class="hover:decoration-white">LinkedIn</a>
+	</address>
+	<p class="px-6 text-xs text-center xl:text-base xl:px-12 mt-16 xl:mt-60 b-4 font-mono">
 		Designed and <a href="https://github.com/amparoamparo" class="underline underline-offset-4 hover:decoration-white">coded</a> by Amparo Zeballos with &#x1F496; and <a href="https://en.wikipedia.org/wiki/Mat%C3%A9" class="no-underline">&#129481;</a> &copy; {today.getFullYear()} Amparo Zeballos. All rights reserved.
 	</p>
 </footer>
 
 <style>
 	@media (prefers-reduced-motion: no-preference) {
+		#star {
+			filter: brightness(50%);
+		}
+
 		footer {
 			animation: fade-in-footer linear, fade-out-footer linear;
 			animation-timeline: view();
@@ -46,6 +55,7 @@ const today = new Date();
 			animation-range-end: 500px, 900px; */
 		}
 
+
 		@keyframes fade-in-footer {
 			from { scale: 0.95; opacity: 0.5; }
 			to { opacity: 1; }
@@ -55,5 +65,6 @@ const today = new Date();
 			from { opacity: 1; }
 			to { opacity: 0; }
 		}
+
 	}
 </style>

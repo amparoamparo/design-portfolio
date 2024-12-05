@@ -12,62 +12,64 @@ import { SITE_TITLE } from '../consts';
 
 	<body>
 		<Header />
-		<main class="xl:min-h-screen xl:grid xl:gap-12 mb-56">
-			<section class="w-full xl:grid py-12">
-					<div class="xl:grid xl:grid-cols-3 xl:gap-48 xl:p-12 p-4">
-							<aside class="xl:sticky xl:top-12 xl:self-start xl:col-span-2 pb-96">
-								<div class="xl:flex xl:flex-col xl:h-72 xl:gap-12 xl:justify-between">
-									<div class="xl:grid xl:gap-12">
-											<h2 class="font-bold text-6xl">Argentine-born <span class="line-through">Graphic Designer, Illustrator, Photographer, Artist</span> Creative based in the UK.</h2>
-										<p class="text-3xl xl:mr-56 font-bold">
+		<main class="lg:min-h-screen lg:grid lg:gap-12 lg:mb-56">
+			<section class="w-full min-h-svh grid py-4 lg:py-12">
+					<div class="lg:grid lg:grid-cols-5 lg:gap-24 lg:p-12 p-6">
+							<aside class="lg:sticky lg:top-14 xl:top-12 lg:self-start lg:col-span-3 lg:pb-96">
+								<div class="lg:flex lg:flex-col lg:h-72 xl:gap-12 lg:justify-between">
+									<div class="grid gap-4 lg:gap-8 xl:gap-8">
+											<h2 class="font-bold text-3xl xl:text-5xl">Argentine-born <span class="line-through">Graphic Designer, Illustrator, Photographer, Artist</span> Creative based in the UK.</h2>
+										<p class="text-lg leading-6 xl:text-3xl font-bold xl:pr-40">
 											¡Hola! I'm Amparo (ahm-PAH-roh), an Argentine-born creative based in Minehead, Somerset, UK — <span class="italic">where the Beatles filmed 'A Hard Day's Night'!</span>
 										</p>
-										<p class="xl:mr-56">
+										<p class="xl:pr-40">
 											Currently, I'm focussing on design and illustration, producing music-inspired, colourful, texture-rich work with a touch of vintage. Previously, I worked as a Freelance Photographer for over a decade, specialising in portraits and concert photography.
 											<br><br>
 											My creative journey began at the age of 15 when I decided to become a live music photographer. I grew up surrounded by musicians, so picking up a camera and shooting bands felt like second nature! More recently, I discovered a passion for art and illustration, no doubt inspired by my mum, a painter and printmaker.
 											<br><br>
 											<!-- 9-to-5-wise, I've gained a decade of combined experience in UX Content, Localisation, CX, and Trust & Safety, contributing to tech giants like Twitch (Amazon), HP, and IBM, as well as startups in the gaming and tech spaces. -->
 											<!-- <br><br> -->
-											I'm always open to work on cool projects, so send me an email if you have something in mind! :)
+											I'm always open to work on cool projects, so <a href="mailto:hello@amparo.design" class="not-italic underline underline-offset-4 decoration-slate-200 decoration-1 text-black visited:text-black hover:decoration-black transition-all">send me an email</a> if you have something in mind! :)
 										</p>
-										<div class="xl:flex xl:gap-4 mt-4">
+										<div class="flex flex-wrap gap-2 lg:gap-3 mt-4 xl:mt-2 pr-24 xl:pr-64">
 											<p class="uppercase text-xs px-4 py-1 rounded-full outline">Graphic Design</p>
 											<p class="uppercase text-xs px-4 py-1 rounded-full outline">Illustration</p>
 											<p class="uppercase text-xs px-4 py-1 rounded-full outline">Photography</p>
 											<p class="uppercase text-xs px-4 py-1 rounded-full outline">Art Direction</p>
 											<p class="uppercase text-xs px-4 py-1 rounded-full outline">Frontend Development</p>
+											<p class="uppercase text-xs px-4 py-1 rounded-full outline">Music</p>
 											<p class="uppercase text-xs px-4 py-1 rounded-full outline">Vegan baking</p>
 										</div>
 									</div>
 								</div>
 							</aside>
 			
-							<div class=" w-full">
-								<div class="grid grid-cols-2 gap-4">
-									<img width={720} height={720} src="/images/bio-1.jpg" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain"/>
-									<!-- <img width={720} height={720} src="/bio-2.jpg" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-cover"/> -->
-									<!-- <img width={720} height={720} src="/bio-3.jpg" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-cover"/> -->
-									<!-- <img width={720} height={720} src="/bio-4.jpg" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain rotate-2"/>
-									<img width={720} height={720} src="/bio-5.png" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-cover -rotate-6"/>
-									<img width={720} height={720} src="/bio-6.jpg" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain"/>
-									<img width={720} height={720} src="/bio-7.jpg" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain"/> -->
-									<img width={720} height={720} src="/images/AboutPhoto1.jpg" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain -rotate-3 mt-20"/>
-									<img width={720} height={720} src="/images/AboutPhoto2.jpg" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain rotate-3"/>
-									<!-- <img width={720} height={720} src="/bio-8.png" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-cover"/> -->									
+							<div class="w-full min-h-svh grid place-items-center lg:col-span-2 xl:p-12">
+								<div class="grid grid-cols-2 gap-4 mb-20">
+									<img width={720} height={720} src="/images/about-me/bio-9.webp" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain sticky top-52 drop-shadow-md -rotate-6"/>
+									<img width={720} height={720} src="/images/about-me/bio-10.webp" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain sticky top-52 drop-shadow-md rotate-6"/>
+									<img width={720} height={720} src="/images/about-me/bio-1.webp" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain sticky top-52 drop-shadow-md rotate-3"/>
+									<img width={720} height={720} src="/images/about-me/bio-2.webp" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain sticky top-52 drop-shadow-md -rotate-3"/>
+									<img width={720} height={720} src="/images/about-me/bio-3.webp" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain sticky top-52 drop-shadow-md -rotate-6"/>
+									<img width={720} height={720} src="/images/about-me/bio-4.webp" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain sticky top-52 drop-shadow-md rotate-6"/>
+									<img width={720} height={720} src="/images/about-me/bio-8.webp" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain sticky top-52 drop-shadow-md rotate-12"/>
+									<!-- <img width={720} height={720} src="/images/about-me/bio-5.webp" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain sticky top-52 drop-shadow-md -rotate-6"/> -->
+									<img width={720} height={720} src="/images/about-me/bio-6.webp" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain sticky top-52 drop-shadow-md -rotate-12"/>
+									<img width={720} height={720} src="/images/about-me/bio-7.webp" alt="" class="rounded-3xl col-span-2 w-full aspect-square object-contain sticky top-52 drop-shadow-md -rotate-6"/>
+									<div class="min-h-80"></div>
 								</div>
 							</div>
 						</div>
 			</section>
 	</main>
-	<Footer class="sticky top-12"/>
+	<Footer/>
 	</body>
 </html>
 
 <style>
 	@media (prefers-reduced-motion: no-preference) {
 		img {
-			animation: fade-in ease-in-out 10s, fade-out linear;
+			animation: fade-in ease-in-out 10s;
 			animation-timeline: view();
 			animation-range: entry, exit;
 			/* animation-range-start: cover, cover;

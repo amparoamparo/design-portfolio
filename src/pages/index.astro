@@ -31,33 +31,31 @@ const entries = await Promise.all(
 
 	<body>
 		<Header />
-		<main class="xl:grid xl:gap-12 py-12">
-				<section class="w-full xl:grid">
+		<main class="grid lg:gap-12 py-4 lg:py-12">
+				<section class="lg:w-full grid">
 					{
 						entries.map(({ frontmatter, Content }) => (
-							<div class="xl:grid xl:grid-cols-3 xl:gap-24 xl:p-12 p-4">
-								<aside class="xl:sticky top-12 xl:self-start">
-									<div class="xl:flex xl:flex-col mb-24 xl:gap-12 xl:justify-between">
-										<div class="grid gap-8">
+							<div class="grid lg:grid-cols-3 gap-4 lg:gap-24 lg:p-12 p-6">
+											<h2 class="font-bold text-xl lg:hidden">{frontmatter.title}</h2>
+								<aside class="lg:sticky lg:top-12 lg:self-start">
+									<div class="lg:flex lg:flex-col mb-8 lg:mb-24 lg:gap-12 lg:justify-between">
+										<div class="grid gap-4 lg:gap-8">
 											{/* <a href={`/projects/${project.slug}/`}> */}
-											<h2 class="font-bold text-xl">{frontmatter.title}</h2>
+											<h2 class="hidden lg:block font-bold text-xl">{frontmatter.title}</h2>
 											{/* </a> */}
 											{Content ? <Content /> : <p>No content found</p>}
 											
 											<div>
-												{/* <h3 class="mt-24"><span class="font-bold">Client:</span> {project.data.client}</h3>
-												<h3 class=""><span class="font-bold">My role:</span> {project.data.role}</h3>
-												<h3 class=""><span class="font-bold">Deliverables:</span> {project.data.deliverables}</h3> */}
-												<div class="flex gap-4 mt-4">{frontmatter.tags.map((tag) => ( <p class="uppercase text-xs px-4 py-1 rounded-full outline">{tag}</p> ))}</div>
+												<div class="flex lg:gap-4 gap-2 mt-2 lg:mt-4 flex-wrap">{frontmatter.tags.map((tag) => ( <p class="uppercase text-xs px-4 py-1 rounded-full outline">{tag}</p> ))}</div>
 											</div>
 										</div>
 										{/* <a href={`/projects/${project.slug}/`} class="font-sans font-bold not-italic underline underline-offset-4 decoration-slate-200 decoration-1 hover:decoration-black text-black visited:text-black">Explore the project</a> */}
 									</div>
 								</aside>
 				
-								<div class="col-span-2 w-full">
-									<div class="grid grid-cols-2 gap-4">
-										<Image width={1920} height={1280} src={frontmatter.images[0]} alt="" class="rounded-3xl col-span-2 w-full aspect-auto" loading={'eager'}/>
+								<div class="lg:col-span-2 lg:w-full">
+									<div class="grid lg:grid-cols-2 gap-4">
+										<Image width={1920} height={1280} src={frontmatter.images[0]} alt="" class="rounded-3xl lg:col-span-2 w-full aspect-auto" loading={'eager'}/>
 										<Image width={720} height={360} src={frontmatter.images[1]} alt="" class="rounded-3xl w-full"/>
 										<Image width={720} height={360} src={frontmatter.images[2]} alt="" class="rounded-3xl w-full"/>
 										<Image width={720} height={360} src={frontmatter.images[3]} alt="" class="rounded-3xl w-full"/>
@@ -65,7 +63,7 @@ const entries = await Promise.all(
 									</div>
 								</div>
 							</div>
-								<hr class="h-px border-0 my-12 mx-12 bg-gradient-to-r from-transparent via-slate-200 to-transparent last:hidden"/>
+								<hr class="h-px border-0 my-12 mx-6 lg:mx-12 bg-slate-200 lg:bg-gradient-to-r lg:from-transparent lg:via-slate-200 lg:to-transparent last:hidden"/>
 						))
 					}
 				</section>

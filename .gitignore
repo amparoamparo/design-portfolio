@@ -25,4 +25,5 @@ pnpm-debug.log*
 # unused files
 src/layouts/
 src/pages/projects
+src/pages/images-test.astro
 src/pages/rss.xml.js
