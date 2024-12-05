@@ -19,4 +19,4 @@ Illustrated poster featuring hand lettering. This piece is part of an on-going p
 
 After sharing the poster on social media, the band said: _'This is so cute!!!'_.
 
-<img src="/images/projects/Wheatus/wheatus-comment.webp" width="300" height="100">
+<img src="/images/projects/Wheatus/wheatus-comment.webp" width="300" height="100" alt="A screenshot of an Instagram comment by the band Wheatus saying 'This is so cute!!'">
