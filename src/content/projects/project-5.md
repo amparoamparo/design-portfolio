@@ -4,11 +4,11 @@ description: "Illustrated poster inspired by Laura Marling's song 'England cover
 order: 4
 images:
   [
-    "/images/TrueLove1.jpg",
-    "/images/TrueLove3.jpg",
-    "/images/TrueLove3.jpg",
-    "/images/TrueLove4.jpg",
-    "/images/truelove-animation.gif",
+    "/images/projects/TrueLove/truelove-1.webp",
+    "/images/projects/TrueLove/truelove-3.webp",
+    "/images/projects/TrueLove/truelove-4.webp",
+    "/images/projects/TrueLove/truelove-5.webp",
+    "/images/projects/TrueLove/truelove-animation.gif",
   ]
 role: "Illustrator"
 tags: ["poster design", "illustration", "hand lettering"]

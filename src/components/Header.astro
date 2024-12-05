@@ -1,5 +1,15 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+
+// Get the current page's URL
+const currentPath = Astro.url.pathname;
+
+// Define navigation links
+const links = {
+  '/': { text: 'About', href: '/about' },
+  '/about': { text: 'Work', href: '/' },
+};
+const dynamicLink = links[currentPath] || links['/']; // Fallback to home
 ---
 
 <header class="text-lg">
@@ -7,9 +17,11 @@ import HeaderLink from './HeaderLink.astro';
 		<div class="flex items-center">
 			<h1><a href="/" class="text-lg lg:text-4xl font-bold lg:font-bold no-underline">Amparo Zeballos</a></h1>
 		</div>
-		<div class="flex gap-4 text-lg lg:text-2xl items-center">
+		<div class="flex gap-6 text-lg lg:text-2xl items-center">
 			<!-- <HeaderLink href="/" class="no-underline">Work</HeaderLink> -->
-			<HeaderLink href="/about" class="no-underline">About</HeaderLink>
+			<HeaderLink href={dynamicLink.href} class="no-underline">
+        {dynamicLink.text}
+      </HeaderLink>
 			<HeaderLink href="mailto:hello@amparo.design" class="no-underline">Contact</HeaderLink>
 		</div>
 	</nav>

@@ -4,11 +4,11 @@ description: "ASH Guitars is Argentina's leading guitar and bass repair business
 order: 1
 images:
   [
-    "/images/ASHGuitars1.jpg",
-    "/images/ASHGuitars2.jpg",
-    "/images/ASHGuitars5.jpg",
-    "/images/ASHGuitars4.jpg",
-    "/images/ASHGuitars3.jpg",
+    "/images/projects/ASHGuitars/ashguitars-1.webp",
+    "/images/projects/ASHGuitars/ashguitars-2.webp",
+    "/images/projects/ASHGuitars/ashguitars-5.webp",
+    "/images/projects/ASHGuitars/ashguitars-4.webp",
+    "/images/projects/ASHGuitars/ashguitars-3.webp",
   ]
 client: "ASH Guitars"
 role: "Graphic Designer"

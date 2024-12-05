@@ -4,11 +4,11 @@ description: "Personal branding explorations"
 order: 2
 images:
   [
-    "/images/StudioAmparo1.png",
-    "/images/StudioAmparo (2).png",
-    "/images/StudioAmparo8.jpg",
-    "/images/StudioAmparo4.png",
-    "/images/StudioAmparo5.png",
+    "/images/projects/StudioAmparo/studioamparo-1.webp",
+    "/images/projects/StudioAmparo/studioamparo-2.webp",
+    "/images/projects/StudioAmparo/studioamparo-7.webp",
+    "/images/projects/StudioAmparo/studioamparo-4.webp",
+    "/images/projects/StudioAmparo/studioamparo-5.webp",
   ]
 role: "Graphic Designer & Illustrator"
 tags: ["branding", "logo design", "visual identity", "illustration"]
